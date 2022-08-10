@@ -1,0 +1,6 @@
+[submodule "service-discovery"]
+	path = service-discovery
+	url = https://github.com/shopping-api/service-discovery
+[submodule "gateway"]
+	path = gateway
+	url = https://github.com/shopping-api/gateway.git
