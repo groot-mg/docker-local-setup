@@ -4,3 +4,6 @@
 [submodule "gateway"]
 	path = gateway
 	url = https://github.com/shopping-api/gateway.git
+[submodule "observability-tools"]
+	path = observability-tools
+	url = https://github.com/shopping-api/observability-tools.git

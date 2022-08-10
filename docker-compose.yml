@@ -32,3 +32,40 @@ services:
       interval: 20s
       timeout: 5s
       retries: 5
+
+  prometheus:
+    container_name: prometheus
+    build:
+      context: observability-tools/prometheus
+      args:
+        ENVIRONMENT: local
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+
+## Alert manager is set up to send alert to slack, change the slack channel on alertmanager/config/alertmanager-local.yml and change 'api_url' to enable this
+#  alertmanager:
+#    container_name: alertmanager
+#    build:
+#      context: observability-tools/alertmanager
+#      args:
+#        ENVIRONMENT: local
+#    restart: unless-stopped
+#    ports:
+#      - "9093:9093"
+#    command:
+#      - --config.file=/etc/alertmanager/alertmanager.yml
+
+  # default user and password: admin
+  grafana:
+    container_name: grafana
+    build: observability-tools/grafana
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./observability-tools/grafana/provisioning/:/etc/grafana/provisioning/
