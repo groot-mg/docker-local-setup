@@ -1,6 +1,11 @@
 version: '3.8'
 
 services:
+  keycloak:
+    extends:
+      file: identity-service/docker-compose.yml
+      service: keycloak
+ 
   service-discovery:
     container_name: service-discovery
     build: service-discovery/service-discovery-app

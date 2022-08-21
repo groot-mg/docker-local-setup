@@ -7,3 +7,6 @@
 [submodule "observability-tools"]
 	path = observability-tools
 	url = https://github.com/shopping-api/observability-tools.git
+[submodule "identity-service"]
+	path = identity-service
+	url = https://github.com/shopping-api/identity-service.git
