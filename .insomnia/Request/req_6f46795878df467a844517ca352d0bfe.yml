@@ -1,0 +1,21 @@
+_id: req_6f46795878df467a844517ca352d0bfe
+type: Request
+parentId: fld_4bb30eabffa44a46b339afa3f91fc711
+modified: 1661173807711
+created: 1661173689548
+url: "{{ _['identity-service'] }}/private/health"
+name: Health
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1653992125430.875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

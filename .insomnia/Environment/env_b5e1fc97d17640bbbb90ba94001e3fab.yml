@@ -1,0 +1,36 @@
+_id: env_b5e1fc97d17640bbbb90ba94001e3fab
+type: Environment
+parentId: env_edb09e6185707ca8647ce983741f5957d03734bf
+modified: 1661378697980
+created: 1653992191238
+name: Local
+data:
+  gateway: http://localhost:8080
+  service-discovery: http://localhost:8081
+  identity-service: http://localhost:8181
+  keycloak:
+    host: http://localhost:8180
+    realm: shopping-api
+    client_id: demo-client
+    client_secret: ZhVCiZ3pyKwxWcXh5K7wC4fcnSTP3YGC
+  tools:
+    grafana: http://localhost:3000
+    prometheus: http://localhost:9090
+dataPropertyOrder:
+  "&":
+    - gateway
+    - service-discovery
+    - identity-service
+    - keycloak
+    - tools
+  "&~|keycloak":
+    - host
+    - realm
+    - client_id
+    - client_secret
+  "&~|tools":
+    - grafana
+    - prometheus
+color: "#676ecb"
+isPrivate: false
+metaSortKey: 1653992191238

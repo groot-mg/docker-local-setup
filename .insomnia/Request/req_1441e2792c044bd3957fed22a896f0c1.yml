@@ -1,0 +1,21 @@
+_id: req_1441e2792c044bd3957fed22a896f0c1
+type: Request
+parentId: fld_e2569dbf23d243b49ee432041d96433c
+modified: 1661175724168
+created: 1661175721783
+url: "{{ _.keycloak.host }}/metrics"
+name: Metrics
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1661174738800.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

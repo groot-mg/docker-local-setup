@@ -1,0 +1,52 @@
+_id: req_33bc2718ad4d4c6da69ac0041707d6e1
+type: Request
+parentId: fld_aa8d125fc9134e82826ee3dcce948c34
+modified: 1661380663894
+created: 1661180170268
+url: "{{ _.keycloak.host }}/realms/{{ _.keycloak.realm
+  }}/protocol/openid-connect/token"
+name: Token - User OpenId
+description: ""
+method: POST
+body:
+  mimeType: application/x-www-form-urlencoded
+  params:
+    - id: pair_8cb103436a7b4b2db0ff9eec7e1ade47
+      name: client_id
+      value: "{{ _.keycloak.client_id }}"
+      description: ""
+    - id: pair_4c7184754f0d413cbd2ab04aa764d27c
+      name: client_secret
+      value: "{{ _.keycloak.client_secret }}"
+      description: ""
+    - id: pair_d5500a31271d41d796464e59ebe63c26
+      name: username
+      value: admin
+      description: ""
+    - id: pair_85734f67b5504053967c42b4c183d07e
+      name: password
+      value: admin
+      description: ""
+    - id: pair_0e5d8bcaee1049c2b3350f2b9f03b662
+      name: grant_type
+      value: password
+      description: ""
+    - id: pair_57332ed0c8ad4efda88fa5238fca170d
+      name: scope
+      value: openid
+      description: ""
+      disabled: false
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/x-www-form-urlencoded
+    id: pair_07c6f47ae69f43f4bc91450ebd7853c8
+authentication: {}
+metaSortKey: -1661174738688
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

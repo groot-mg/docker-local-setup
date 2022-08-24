@@ -1,0 +1,21 @@
+_id: req_c07f425ff1004a68a776e32368decb0b
+type: Request
+parentId: fld_4bb30eabffa44a46b339afa3f91fc711
+modified: 1661173820053
+created: 1661173689551
+url: "{{ _['identity-service'] }}/private/metrics"
+name: Metrics
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1653992125380.875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

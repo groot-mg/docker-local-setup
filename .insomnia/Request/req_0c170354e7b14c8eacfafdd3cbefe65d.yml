@@ -1,0 +1,26 @@
+_id: req_0c170354e7b14c8eacfafdd3cbefe65d
+type: Request
+parentId: fld_a08fbf2b2eb14aa3ac468485bcfbcec7
+modified: 1661290076070
+created: 1661290045122
+url: "{{ _.keycloak.host }}/admin/realms/{{ _.keycloak.realm
+  }}/users/0869dbdf-deea-4bba-b19a-0a1da5442bf0"
+name: Delete
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{% response 'body', 'req_33bc2718ad4d4c6da69ac0041707d6e1',
+    'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+  prefix: Bearer
+metaSortKey: -1661177314120.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
