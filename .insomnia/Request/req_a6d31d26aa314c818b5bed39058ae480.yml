@@ -1,0 +1,26 @@
+_id: req_a6d31d26aa314c818b5bed39058ae480
+type: Request
+parentId: fld_4d52a66f93474ce2832ec4aa96c2b427
+modified: 1661291657611
+created: 1661182800395
+url: "{{ _.keycloak.host }}/realms/{{ _.keycloak.realm
+  }}/protocol/openid-connect/userinfo"
+name: User Info
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  prefix: Bearer
+  token: "{% response 'body', 'req_33bc2718ad4d4c6da69ac0041707d6e1',
+    'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+metaSortKey: -1661174738745.0312
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

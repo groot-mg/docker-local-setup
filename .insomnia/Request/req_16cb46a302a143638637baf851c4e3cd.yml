@@ -1,0 +1,40 @@
+_id: req_16cb46a302a143638637baf851c4e3cd
+type: Request
+parentId: fld_a08fbf2b2eb14aa3ac468485bcfbcec7
+modified: 1661377087241
+created: 1661183061454
+url: "{{ _.keycloak.host }}/admin/realms/{{ _.keycloak.realm }}/users"
+name: Create
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"username": "test",
+    	"enabled": true,
+    	"firstName": "test",
+    	"lastName": "test",
+    	"email": "drstranger@marvel.com",
+    	"realmRoles": [
+    		"api-client"
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_ac2073ea78dc4458916fb686dc020dc6
+authentication:
+  type: bearer
+  token: "{% response 'body', 'req_33bc2718ad4d4c6da69ac0041707d6e1',
+    'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+  prefix: Bearer
+metaSortKey: -1661178996665
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

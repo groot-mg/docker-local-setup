@@ -1,0 +1,25 @@
+_id: req_1b4f9467a0b34ee8b2d47aa1fc3fb43a
+type: Request
+parentId: fld_a08fbf2b2eb14aa3ac468485bcfbcec7
+modified: 1661377122472
+created: 1661182361754
+url: "{{ _.keycloak.host }}/admin/realms/{{ _.keycloak.realm }}/users"
+name: List
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: "{% response 'body', 'req_33bc2718ad4d4c6da69ac0041707d6e1',
+    'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+  prefix: Bearer
+metaSortKey: -1661182361754
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
