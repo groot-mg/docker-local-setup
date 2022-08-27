@@ -32,4 +32,4 @@ done
 
 
 echo "Starting Docker Compose"
-docker-compose up --build service-discovery gateway
+docker-compose up --build

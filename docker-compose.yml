@@ -50,18 +50,18 @@ services:
     command:
       - --config.file=/etc/prometheus/prometheus.yml
 
-## Alert manager is set up to send alert to slack, change the slack channel on alertmanager/config/alertmanager-local.yml and change 'api_url' to enable this
-#  alertmanager:
-#    container_name: alertmanager
-#    build:
-#      context: observability-tools/alertmanager
-#      args:
-#        ENVIRONMENT: local
-#    restart: unless-stopped
-#    ports:
-#      - "9093:9093"
-#    command:
-#      - --config.file=/etc/alertmanager/alertmanager.yml
+# Alert manager is set up to send alert to slack, change the slack channel on alertmanager/config/alertmanager-local.yml and change 'api_url' to enable this
+  alertmanager:
+    container_name: alertmanager
+    build:
+      context: observability-tools/alertmanager
+      args:
+        ENVIRONMENT: local
+    restart: unless-stopped
+    ports:
+      - "9093:9093"
+    command:
+      - --config.file=/etc/alertmanager/alertmanager.yml
 
   # default user and password: admin
   grafana:
