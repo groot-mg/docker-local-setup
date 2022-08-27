@@ -14,7 +14,7 @@ It is required:
 ## 2. Running steps
 2.1 - First clone the repository:
 ```shell
-git clone ....
+git clone https://github.com/groot-mg/docker-local-setup.git
 ```
 
 2.2 - Download submodules source-code:
