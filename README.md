@@ -19,7 +19,7 @@ git clone ....
 
 2.2 - Download submodules source-code:
 ```shell
-git submodule update --remote
+git submodule update --init
 ```
 3.3 - run the script
 ```shell
