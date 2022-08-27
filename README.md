@@ -43,6 +43,6 @@ As an alternative, instead accessing grafana dashboard to confirm the containers
 | Api Gateway       | http://localhost:8080/private/health | 
 | Service Discovery | http://localhost:8081/private/health |
 | Keycloak          | http://localhost:8180/health         |
-| Prometheus        | Doesn't have it                      |
-| Grafana           | Doesn't have it                      |
-| Alert Manager     | Doesn't have it                      |
+| Prometheus        | http://localhost:9090/-/healthy      |
+| Alert Manager     | http://localhost:9093/-/healthy      |
+| Grafana           | http://localhost:3000/health         |
