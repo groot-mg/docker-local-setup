@@ -21,9 +21,15 @@ git clone https://github.com/groot-mg/docker-local-setup.git
 ```shell
 git submodule update --init
 ```
-3.3 - run the script
+2.3 - run the script
 ```shell
 ./docker-compose.sh
+```
+
+### Extra
+Update submodules locally for already cloned repository:
+```
+git submodule update --remote
 ```
 
 ## 3. Health checks
