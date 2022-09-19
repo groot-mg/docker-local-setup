@@ -7,6 +7,7 @@ NC='\033[0m' # No Color
 servicesName=(
     'service-discovery' 
     'gateway'
+    'sales-catalog'
 )
 
 for name in "${servicesName[@]}"
@@ -31,5 +32,5 @@ do
 done 
 
 
-echo "Starting Docker Compose"
+echo "${Green}Starting Docker Compose${NC}"
 docker-compose up --build
