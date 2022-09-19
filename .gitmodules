@@ -10,3 +10,6 @@
 [submodule "identity-service"]
 	path = identity-service
 	url = https://github.com/shopping-api/identity-service.git
+[submodule "sales-catalog"]
+	path = sales-catalog
+	url = https://github.com/groot-mg/sales-catalog
