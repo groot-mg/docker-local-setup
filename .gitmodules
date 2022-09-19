@@ -1,15 +1,15 @@
 [submodule "service-discovery"]
 	path = service-discovery
-	url = https://github.com/shopping-api/service-discovery
+	url = https://github.com/groot-mg/service-discovery
 [submodule "gateway"]
 	path = gateway
-	url = https://github.com/shopping-api/gateway.git
+	url = https://github.com/groot-mg/gateway.git
 [submodule "observability-tools"]
 	path = observability-tools
-	url = https://github.com/shopping-api/observability-tools.git
+	url = https://github.com/groot-mg/observability-tools.git
 [submodule "identity-service"]
 	path = identity-service
-	url = https://github.com/shopping-api/identity-service.git
+	url = https://github.com/groot-mg/identity-service.git
 [submodule "sales-catalog"]
 	path = sales-catalog
 	url = https://github.com/groot-mg/sales-catalog
