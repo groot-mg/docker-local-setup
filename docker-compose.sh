@@ -12,7 +12,7 @@ servicesName=(
 
 for name in "${servicesName[@]}"
 do
-    DOCKER_IMAGE_ID=$(docker images -aq docker-local-setup_${name})
+    DOCKER_IMAGE_ID=$(docker images -aq docker-local-setup-${name})
     if [[ ! -z "${DOCKER_IMAGE_ID}" ]]; then
 
         LIVE_CONTAINER_ID=$(docker ps -a | grep `docker images | grep ${DOCKER_IMAGE_ID} | awk '{print $1":"$2}'` | awk '{print $1}')
@@ -32,5 +32,5 @@ do
 done 
 
 
-echo "${Green}Starting Docker Compose${NC}"
+echo "${Yellow}Starting Docker Compose${NC}"
 docker-compose up --build

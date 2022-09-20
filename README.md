@@ -46,9 +46,12 @@ As an alternative, instead accessing grafana dashboard to confirm the containers
 
 | Component         | Health check endpoint                |
 |-------------------|--------------------------------------|
-| Api Gateway       | http://localhost:8080/private/health | 
-| Service Discovery | http://localhost:8081/private/health |
 | Keycloak          | http://localhost:8180/health         |
 | Prometheus        | http://localhost:9090/-/healthy      |
 | Alert Manager     | http://localhost:9093/-/healthy      |
 | Grafana           | http://localhost:3000/health         |
+| Grafana Loki      | http://localhost:3100/ready          |
+| Grafana Tempo     | http://localhost:3101/ready          |
+| Api Gateway       | http://localhost:8080/private/health | 
+| Service Discovery | http://localhost:8081/private/health |
+| Sales Catalog     | http://localhost:8082/private/health |
