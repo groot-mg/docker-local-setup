@@ -105,8 +105,7 @@ services:
       fluent-bit:
         condition: service_started
     environment:
-      - SPRING_PROFILES_ACTIVE=local
-      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-discovery:8081/eureka/
+      - EUREKA_URL=http://service-discovery:8081
       - KEYCLOAK_URL=http://keycloak:8080
       - ZIPKIN_URL=http://tempo:9411
     healthcheck:
