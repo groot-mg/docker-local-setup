@@ -39,41 +39,41 @@ services:
     build: observability-tools/grafana
     restart: unless-stopped
     depends_on:
-      - loki
+#      - loki
       - prometheus
-      - tempo
+#      - tempo
     ports:
       - "3000:3000"
     volumes:
       - ./observability-tools/grafana/provisioning/:/etc/grafana/provisioning/
 
-  tempo:
-    image: grafana/tempo:1.2.0
-    container_name: tempo
-    command: -config.file /etc/tempo-config.yml
-    volumes:
-      - ./observability-tools/tempo/tempo.yml:/etc/tempo-config.yml
-    ports:
-      - "3101:3100"     # Tempo
-      - "9411:9411"     # Zipkin
+#  tempo:
+#    image: grafana/tempo:1.2.0
+#    container_name: tempo
+#    command: -config.file /etc/tempo-config.yml
+#    volumes:
+#      - ./observability-tools/tempo/tempo.yml:/etc/tempo-config.yml
+#    ports:
+#      - "3101:3100"     # Tempo
+#      - "9411:9411"     # Zipkin
 
-  loki:
-    image: grafana/loki:2.4.0
-    container_name: loki
-    depends_on:
-      - fluent-bit
-    ports:
-      - "3100:3100"
+#  loki:
+#    image: grafana/loki:2.4.0
+#    container_name: loki
+#    depends_on:
+#      - fluent-bit
+#    ports:
+#      - "3100:3100"
 
-  fluent-bit:
-    image: grafana/fluent-bit-plugin-loki:2.4.0-amd64
-    container_name: fluent-bit
-    ports:
-      - "24224:24224"
-    environment:
-      - LOKI_URL=http://loki:3100/loki/api/v1/push
-    volumes:
-      - ./observability-tools/fluent-bit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+#  fluent-bit:
+#    image: grafana/fluent-bit-plugin-loki:2.4.0-amd64
+#    container_name: fluent-bit
+#    ports:
+#      - "24224:24224"
+#    environment:
+#      - LOKI_URL=http://loki:3100/loki/api/v1/push
+#    volumes:
+#      - ./observability-tools/fluent-bit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
 
  # Applications
 
@@ -102,21 +102,14 @@ services:
         condition: service_healthy
       keycloak:
         condition: service_healthy
-      fluent-bit:
-        condition: service_started
     environment:
       - EUREKA_URL=http://service-discovery:8081
       - KEYCLOAK_URL=http://keycloak:8080
-      - ZIPKIN_URL=http://tempo:9411
     healthcheck:
       test: "curl --fail --silent http://localhost:8080/private/health | grep UP || exit 1"
       interval: 20s
       timeout: 5s
       retries: 5
-    logging:
-      driver: fluentd
-      options:
-        fluentd-address: 127.0.0.1:24224
 
   sales-catalog:
     container_name: sales-catalog
@@ -129,18 +122,11 @@ services:
         condition: service_healthy
       keycloak:
         condition: service_healthy
-      fluent-bit:
-        condition: service_started
     environment:
       - SPRING_PROFILES_ACTIVE=local
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-discovery:8081/eureka/
-      - ZIPKIN_URL=http://tempo:9411
     healthcheck:
       test: "curl --fail --silent http://localhost:8082/private/health | grep UP || exit 1"
       interval: 20s
       timeout: 5s
       retries: 5
-    logging:
-        driver: fluentd
-        options:
-          fluentd-address: 127.0.0.1:24224
