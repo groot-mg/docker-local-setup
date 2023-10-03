@@ -13,3 +13,6 @@
 [submodule "sales-catalog"]
 	path = sales-catalog
 	url = https://github.com/groot-mg/sales-catalog
+[submodule "basket-service"]
+	path = basket-service
+	url = https://github.com/groot-mg/basket-service.git

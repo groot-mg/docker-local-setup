@@ -127,3 +127,22 @@ services:
       interval: 20s
       timeout: 5s
       retries: 5
+
+  basket-service:
+    container_name: basket-service
+    build: basket-service/basket-service-app
+    restart: always
+    ports:
+      - "8083:8083"
+    depends_on:
+      service-discovery:
+        condition: service_healthy
+      keycloak:
+        condition: service_healthy
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-discovery:8081/eureka/
+    healthcheck:
+      test: "curl --fail --silent http://localhost:8083/private/health | grep UP || exit 1"
+      interval: 20s
+      timeout: 5s
+      retries: 5

@@ -8,6 +8,7 @@ servicesName=(
     'service-discovery' 
     'gateway'
     'sales-catalog'
+    'basket-service'
 )
 
 for name in "${servicesName[@]}"
