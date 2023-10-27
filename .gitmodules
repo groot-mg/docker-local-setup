@@ -16,3 +16,6 @@
 [submodule "basket-service"]
 	path = basket-service
 	url = https://github.com/groot-mg/basket-service.git
+[submodule "local-kafka-config"]
+	path = local-kafka-config
+	url = https://github.com/groot-mg/local-kafka-config.git
