@@ -93,6 +93,22 @@ services:
       file: local-kafka-config/docker-compose.yml
       service: kafdrop
 
+  # PostgreSQL
+  database:
+    extends:
+      file: local-database-config/docker-compose.yml
+      service: database
+
+  pgadmin:
+    extends:
+      file: local-database-config/docker-compose.yml
+      service: pgadmin
+
+  postgres-exporter:
+    extends:
+      file: local-database-config/docker-compose.yml
+      service: postgres-exporter
+
   # Observability
   prometheus:
     extends:
