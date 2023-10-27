@@ -1,28 +1,11 @@
 version: '3.8'
 
 services:
+  # Applications
   keycloak:
     extends:
       file: identity-service/docker-compose.yml
       service: keycloak
-
-  # Observability
-  prometheus:
-    extends:
-      file: observability-tools/docker-compose.yml
-      service: prometheus
-
-  alert-manager:
-    extends:
-      file: observability-tools/docker-compose.yml
-      service: alertmanager
-
-  grafana:
-    extends:
-      file: observability-tools/docker-compose.yml
-      service: grafana
-
-  # Applications
 
   service-discovery:
     container_name: service-discovery
@@ -109,3 +92,19 @@ services:
     extends:
       file: local-kafka-config/docker-compose.yml
       service: kafdrop
+
+  # Observability
+  prometheus:
+    extends:
+      file: observability-tools/docker-compose.yml
+      service: prometheus
+
+  alert-manager:
+    extends:
+      file: observability-tools/docker-compose.yml
+      service: alertmanager
+
+  grafana:
+    extends:
+      file: observability-tools/docker-compose.yml
+      service: grafana
