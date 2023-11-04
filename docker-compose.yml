@@ -52,6 +52,7 @@ services:
         condition: service_healthy
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-discovery:8081/eureka/
+      - POSTGRESQL_URL=database:5432
     healthcheck:
       test: "curl --fail --silent http://localhost:8082/private/health | grep UP || exit 1"
       interval: 20s
