@@ -34,4 +34,4 @@ done
 
 
 echo "${Yellow}Starting Docker Compose${NC}"
-docker-compose up --build
+docker-compose up -d --build
