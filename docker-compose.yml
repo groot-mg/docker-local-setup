@@ -77,22 +77,6 @@ services:
       timeout: 5s
       retries: 5
 
-  # Kafka
-  kafka:
-    extends:
-      file: local-kafka-config/docker-compose.yml
-      service: kafka
-
-  zookeeper:
-    extends:
-      file: local-kafka-config/docker-compose.yml
-      service: zookeeper
-  
-  kafdrop:
-    extends:
-      file: local-kafka-config/docker-compose.yml
-      service: kafdrop
-
   # PostgreSQL
   database:
     extends:
