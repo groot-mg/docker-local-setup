@@ -28,7 +28,7 @@ do
 
     echo "${Green}Building ${Yellow}${name}${NC}"
     cd "${name}"
-    ./gradlew clean build
+    ./gradlew clean build -x :app:generateGitProperties
     cd ..
 done 
 
